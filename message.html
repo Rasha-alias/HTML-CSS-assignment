@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" >
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  
+  <!-- Import for CSS file -->
+    <link rel="stylesheet" href="Rasha CV.css">
+  
+    
+  <title>Rasha website evaluation</title>
+  </head>
+  
+  
+  <body>
+
+ <!-- Header with title and navbar -->
+ <div class="header">
+  <h5>Welcome to my page</h5>
+
+  <nav class="navbar navbar-expand-sm navbar-light pb-2">
+    <div class="container-fluid">
+
+      <!-- loggan -->
+      <a class="navbar-brand ps-3" href=" Home page CV.html">
+          <img src="logo.png" height="37px" width="37px" alt="CV Logo"> 
+      </a>
+
+       <!-- button collapse-->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar">
+          <span class="navbar-toggler-icon"></span> 
+      </button>
+        
+      <!--The navbar become a button in a small screen -->
+          <div class="collapse navbar-collapse" id="collapseNavbar">
+         
+              <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"  href="#" role="button" data-bs-toggle="dropdown"><b>CV</b></a>
+
+                    <!-- dropdown menu for CV -->
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="Personal Information.html">personal Information</a></li>
+                      <li><a class="dropdown-item" href="Rasha Experience.html">Experience</a></li>
+                      <li><a class="dropdown-item" href="Rasha Education.html">Education</a></li>
+                      <li><a class="dropdown-item" href="Rasha Language.html">Language</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item">
+                  <a class="nav-link" href="#"><b>Hobby & Interest</b></a>
+                  </li>
+
+                  <li class="nav-item">
+                  <a class="nav-link" href="More Information.html"><b>More Information</b></a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link" href="Message.html"><b>Leave message</b></a>
+                      </li>
+
+                      <li class="nav-item nav-item-my-item">
+                        <a class="nav-link" href="Home page CV.html"><b>Home</b></a>
+                        </li>   
+
+              </ul> 
+         </div>    
+    </div> 
+  </nav>
+</div>
+
+   <!--main content in the body-->
+    <div class="container mt-3">
+      <center>
+      <h1 class="Evaluation-title">Evaluation</h1>
+      <p class="text-white">Her you can evaluate the website, Let us see your opinion about this page</p>
+      <form>
+
+        <div class="row mb-4 ">
+           <!-- Input field for name, message and date-->
+          <div class="col-sm-4">
+            <input type="text" class="form-control" placeholder="write your name" id="name">
+          </div>
+
+          <div class="col-sm-4">
+            <input type="text" class="form-control" placeholder="Evaluate the website" id="evaluate">
+          </div>
+
+          <div class="col-sm-4">
+            <input type="date" class="form-control" placeholder="Write the date" id="date">
+          </div>
+
+       </div>  
+
+         
+          <div class="row mb-4">
+            <div class="col-12 d-flex justify-content-center">
+               <!-- button to add a new object of name, message and date by calling addValidation function-->
+              <button type="button" class="btn btn-dark  btn btn-outline-warning" onclick="addEvaluation();">Click here</button> 
+              </div>
+          </div>
+
+      </form>
+      </center>   
+    </div>
+     <!-- Div Tag for Table output -->
+    <div id="output"></div>
+
+    
+    
+    <!--Footer -->
+<div class="footer">
+  <!-- container with one row.In this row there are 3 columns -->
+   <div class="container justify-content-between">
+       <div class="row">
+
+            <!-- First column contains linkar about social media -->
+           <div class="col-sm-2  col-md-2  col-lg-3">
+               <h2>About us</h2>
+               <div class="content">
+                   
+                   <div class="social pt-2">
+                       <a href="https://facebook.com/">
+                           <span class="fab fa-facebook-f"></span>
+                       </a>
+                      
+                   </div>
+
+                   <div class="social pt-2 mb-2"> 
+                       <a href="https://instagram.com/">
+                           <span class="fab fa-instagram-square"></span>
+                       </a>
+                       
+                   </div>
+               </div>
+           </div>
+            <!--Second column conrains linkar about adress-->
+           <div class="col-sm-6  col-md-5  col-lg-5">
+               <h2>Address</h2>
+
+               <div class="content">
+
+                   <div class="place pt-2">
+                       <span class="fas fa-map-marker-alt"></span>
+                       <span class="text">Atterbomsgatan 32, Uppsala</span>
+                   </div>
+
+                   <div class="email pt-2 mb-2">
+                       <span class="fas fa-envelope"></span>
+                       <span class="text">Rashaziyad000@Gmail.com</span>
+                   </div>
+               </div>
+               
+           </div>
+           <!--Third column about contact by email link and phone number-->
+           <div class="col-sm-4  col-md-5  col-lg-4">
+               <h2>Contact us</h2>
+               <div class="content">
+
+                   <div class="d-flex pt-2">
+                       <span class="fas fa-envelope"></span>
+                       <a href=" mailto:rashaziyad000@gmail.com" class="btn btn-basic text-black">Rashaziyad000@gmail.com</a>
+                   </div> 
+               
+                   <div class="d-flex pt-2">
+                       
+                       <div class="phone">
+                           <span class="fas fa-phone-alt"></span>
+                           <span class="text">0738974628</span>
+                       </div>
+   
+                   </div>      
+                   
+               </div>
+           </div>
+       </div>
+   </div>       
+</div>
+   
+
+  </body>
+
+  <script src="message.js"></script>
+</html>

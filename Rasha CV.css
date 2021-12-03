@@ -1,0 +1,384 @@
+/* greate variable in Scss */
+/* function for the header and footer that have the same proprites*/
+/* function that have the same proprites for personal information,Work experience, experience, education and language title in the second column */
+/* function that have the same proprites for personal information, experience, education and language items in the first column */
+/* function font that have the same proprites */
+/* function for fab and fas icon */
+/* function for the emety content to appear like line */
+/*size for the filp card boxes in page (more information) */
+/* styleitems buttons in the first column of the page */
+.btn {
+  color: bisque;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* style body*/
+body {
+  background-image: url("background5.jpg");
+  background-size: cover;
+}
+
+/* style header- call the header_footer function */
+.header {
+  background-color: #44a9b1;
+  width: 100%;
+  padding-top: 20px;
+  text-align: center;
+  height: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+/* style footer- call the header_footer function*/
+.footer {
+  background-color: #44a9b1;
+  width: 100%;
+  padding-top: 20px;
+  height: 300px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: fixed;
+}
+
+/* style navbar */
+.navbar {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  height: 35px;
+}
+
+.navbar-collapse {
+  background-color: #44a9b1;
+}
+
+/*  */
+.nav-item {
+  font-size: 15px;
+  font-family: bold Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.items {
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  text-shadow: 2px 2px 20px #eee7e7;
+  color: bisque;
+}
+
+.my-row {
+  border-top: solid 1px white;
+}
+
+/* call the items_title() function to the personal-information-title*/
+.personal-information-title {
+  font: italic bold 40px Georgia, serif;
+  color: #16012e;
+  text-align: center;
+  text-shadow: 2px 2px 15px #61eee7, 0 0 25px #0af5d5, 0 0 5px #11d1d8;
+  padding-top: 20px;
+  padding-bottom: 4px;
+  background-color: bisque;
+  margin-top: 40px;
+  width: auto;
+  height: 100px;
+  border-radius: 30px;
+}
+
+/* call the items_title() function to the experience-title*/
+.experience-title {
+  font: italic bold 40px Georgia, serif;
+  color: #16012e;
+  text-align: center;
+  text-shadow: 2px 2px 15px #61eee7, 0 0 25px #0af5d5, 0 0 5px #11d1d8;
+  padding-top: 20px;
+  padding-bottom: 4px;
+  background-color: bisque;
+  margin-top: 40px;
+  width: auto;
+  height: 100px;
+  border-radius: 30px;
+}
+
+/* call the items_title() function to the education-title*/
+.education-title {
+  font: italic bold 40px Georgia, serif;
+  color: #16012e;
+  text-align: center;
+  text-shadow: 2px 2px 15px #61eee7, 0 0 25px #0af5d5, 0 0 5px #11d1d8;
+  padding-top: 20px;
+  padding-bottom: 4px;
+  background-color: bisque;
+  margin-top: 40px;
+  width: auto;
+  height: 100px;
+  border-radius: 30px;
+}
+
+/* call the items_title() function to the language-title*/
+.language-title {
+  font: italic bold 40px Georgia, serif;
+  color: #16012e;
+  text-align: center;
+  text-shadow: 2px 2px 15px #61eee7, 0 0 25px #0af5d5, 0 0 5px #11d1d8;
+  padding-top: 20px;
+  padding-bottom: 4px;
+  background-color: bisque;
+  margin-top: 40px;
+  width: auto;
+  height: 100px;
+  border-radius: 30px;
+}
+
+/*set height and width to the pictures in the caroselen */
+.d-block {
+  width: 900px;
+  height: 400px;
+}
+
+/* style tables border*/
+.table-border {
+  font-size: 17px;
+  font-family: bold Verdana, Geneva, Tahoma, sans-serif;
+  color: bisque;
+}
+
+.list-group-item {
+  font-size: 20px;
+  font-weight: bold;
+  font: bold Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* style the container for the personal information page*/
+.my-container-1 {
+  height: 290px;
+  width: 50%;
+  margin-top: 60px;
+  margin-bottom: 35px;
+  margin-left: 10px;
+  background-color: bisque;
+  border-radius: 20px;
+}
+
+/* style the container for the experience page*/
+.my-container-2 {
+  margin-top: 50px;
+  margin-bottom: 120px;
+}
+
+/* style the container for the education page*/
+.my-container-3 {
+  margin-top: 50px;
+  margin-bottom: 35px;
+}
+
+/* style the container for the language page*/
+.my-container-4 {
+  margin-top: 50px;
+  margin-bottom: 55px;
+}
+
+/************************************************/
+.flip-card {
+  background-color: transparent;
+  height: 200px;
+  width: 250px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  height: 200px;
+  width: 250px;
+  text-align: center;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  height: 200px;
+  width: 250px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-image: url("6.jpg");
+  height: 200px;
+  width: 250px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.flip-card-back {
+  background-color: #44a9b1;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  height: 200px;
+  width: 250px;
+  border-radius: 20px;
+}
+
+.img2 {
+  height: 200px;
+  width: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-border-image: solid 1px #44a9b1;
+     border-image: solid 1px #44a9b1;
+  border-radius: 20px;
+}
+
+.img3 {
+  height: 200px;
+  width: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-border-image: solid 1px #44a9b1;
+     border-image: solid 1px #44a9b1;
+  border-radius: 20px;
+}
+
+/**********************************************/
+.progress {
+  height: 10px;
+  background-color: #44a9b1;
+  opacity: 0.9;
+}
+
+.main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: 500;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.content {
+  margin: 20px 0 0 0;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* style the empty content before */
+.content:before {
+  position: absolute;
+  content: '';
+  height: 4px;
+  top: -10px;
+  width: 50%;
+  background: #1a1a1a;
+}
+
+/*/* style the empty content after */
+.content:after {
+  position: absolute;
+  content: '';
+  height: 4px;
+  top: -10px;
+  width: 15%;
+  background: #f3f1ec;
+}
+
+.content .fab {
+  font-size: 18px;
+  background: #f3f1ec;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: black;
+}
+
+/*set hover to fab icon */
+.content .fab:hover {
+  background: bisque;
+}
+
+.content .fas {
+  font-size: 18px;
+  background: #f3f1ec;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: black;
+}
+
+.content .text {
+  font-size: 15px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.content .d-flex {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.d-flex .fas {
+  font-size: 18px;
+  background: #f3f1ec;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: black;
+}
+
+/*set hover to fas icon */
+.content .fas:hover {
+  background: bisque;
+}
+
+/* evaluation word in message */
+.Evaluation-title {
+  background-image: url("8.jfif");
+  width: 300px;
+  height: 55px;
+  border-radius: 20px;
+}
+
+.img {
+  border: 1px solid #4ae4e9;
+  border-radius: 10px;
+  width: 150px;
+}
+
+.img:hover {
+  -webkit-box-shadow: 0 0 5px 5px rgba(75, 202, 192, 0.5);
+          box-shadow: 0 0 5px 5px rgba(75, 202, 192, 0.5);
+}
+/*# sourceMappingURL=Rasha CV.css.map */

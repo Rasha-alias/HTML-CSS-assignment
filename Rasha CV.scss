@@ -1,0 +1,358 @@
+/* greate variable in Scss */   
+$my_color: black;
+$my_color_2: rgb(68, 169, 177);
+$my_color_3:bisque;
+$my_border:solid;
+$my_bordersize:1px;
+$my_bordercolor:white;
+$position: center;
+$position_1: absolute;
+$position_2: relative;
+$color:black;
+$shadow_1: 2px 2px 15px rgb(97, 238, 231), 0 0 25px rgb(10, 245, 213), 0 0 5px rgb(17, 209, 216);
+$shadow_2: 2px 2px 20px rgb(238, 231, 231);
+$font_1: bold Verdana, Geneva, Tahoma, sans-serif;
+$margin_top_container:50px;
+$font_bold:bold;
+$my_border_radius:20px;
+
+
+/* function for the header and footer that have the same proprites*/
+@mixin header_footer
+ {
+    background-color: $my_color_2;
+    width:100%; 
+    padding-top:20px;
+  }
+
+/* function that have the same proprites for personal information,Work experience, experience, education and language title in the second column */
+@mixin items_title 
+{
+   font: italic bold 40px Georgia, serif;
+   color: rgb(22, 1, 46);
+   text-align: $position;
+   text-shadow: $shadow_1;
+   padding-top:20px;  
+   padding-bottom:4px ;
+   background-color:$my_color_3;
+   margin-top: 40px;
+   width:auto;
+   height:100px;
+   border-radius: 30px; 
+}
+
+/* function that have the same proprites for personal information, experience, education and language items in the first column */
+@mixin item 
+{
+    padding: 10px; 
+    text-align: $position; 
+    margin:10px; 
+    text-shadow: $shadow_2;
+    color:$my_color_3;
+}
+/* function font that have the same proprites */
+@mixin font{
+font-size:15px;
+font-weight: 500;
+}
+
+/* function for fab and fas icon */
+@mixin fab_fas {
+  font-size: 18px;
+  background: rgb(243, 241, 236);
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: $position;
+  border-radius: 50%;
+  transition: 0.3s;
+  color: $my_color;
+}
+
+/* function for the emety content to appear like line */
+@mixin content_before_after{
+  position: $position_1;
+  content: '';
+  height: 4px;
+  top: -10px;
+}
+
+/*size for the filp card boxes in page (more information) */
+@mixin flip-card-size {
+  height: 200px;
+  width: 250px;
+}
+
+/* styleitems buttons in the first column of the page */
+.btn
+{
+color: $my_color_3;
+@include font();
+}
+
+/* style body*/
+body
+{
+     background-image: url("background5.jpg");
+     background-size: cover;
+}
+
+/* style header- call the header_footer function */
+.header
+{ 
+@include header_footer(); 
+text-align:$position; 
+height:100px;
+position: $position_2;
+z-index:1;       
+}
+
+/* style footer- call the header_footer function*/
+.footer
+{
+@include header_footer();
+height:300px;
+padding-left: 20px;
+padding-right: 20px;  
+position:fixed;
+}
+      
+/* style navbar */
+.navbar{
+  position: $position_1;
+  top:50px;
+ width:100%;
+ height:35px;
+}
+
+.navbar-collapse{
+background-color:$my_color_2 ;
+}
+
+/*  */
+.nav-item{
+  font-size: 15px;
+  font-family: $font_1;
+}
+
+.items{
+ @include item(); 
+}
+
+.my-row{
+  border-top: $my_border $my_bordersize $my_bordercolor; 
+}
+
+/* call the items_title() function to the personal-information-title*/
+.personal-information-title{
+  @include items_title();
+}
+
+/* call the items_title() function to the experience-title*/
+.experience-title{
+  @include items_title();
+}
+
+/* call the items_title() function to the education-title*/
+.education-title{
+  @include items_title();  
+}
+
+/* call the items_title() function to the language-title*/
+.language-title{
+  @include items_title();
+}
+
+/*set height and width to the pictures in the caroselen */
+.d-block{
+  width:900px;
+  height:400px;
+}
+
+/* style tables border*/
+.table-border{
+  font-size: 17px;
+  font-family: $font_1;
+  color:$my_color_3;
+}
+
+
+.list-group-item
+{
+  font-size:20px;
+  font-weight: $font_bold; 
+  font: $font_1;
+}
+
+/* style the container for the personal information page*/
+.my-container-1{
+  height: 290px;
+  width:50%;
+  margin-top: 60px;
+  margin-bottom: 35px;
+  margin-left: 10px;
+  background-color: $my_color_3;
+  border-radius: $my_border_radius;
+}
+
+/* style the container for the experience page*/
+.my-container-2{
+  margin-top: $margin_top_container;
+  margin-bottom: 120px;
+}
+
+/* style the container for the education page*/
+.my-container-3{
+  margin-top: $margin_top_container;
+  margin-bottom: 35px;
+}
+
+/* style the container for the language page*/
+.my-container-4{
+  margin-top: $margin_top_container;
+  margin-bottom: 55px;
+}
+
+
+/************************************************/
+/* style of this block is about flip card  in page (more information) */
+.flip-card {
+  background-color: transparent;
+  @include flip-card-size;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: $position_2;
+  @include flip-card-size;
+  text-align: $position;
+  perspective: 500px;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: $position_1;
+  @include flip-card-size;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+background-image: url("6.jpg");
+@include flip-card-size;
+text-align: $position;
+border-radius: $my_border_radius;
+}
+
+.flip-card-back {
+  background-color: $my_color_2;
+  transform: rotateY(180deg);
+  @include flip-card-size;
+  border-radius: $my_border_radius;
+}
+.img2{
+  @include flip-card-size;
+ object-fit:cover;
+border-image: solid 1px $my_color_2;
+ border-radius: $my_border_radius;
+}
+
+.img3{
+  @include flip-card-size;
+ object-fit:contain;
+border-image: solid 1px $my_color_2;
+ border-radius: $my_border_radius;
+}
+
+/**********************************************/
+
+/*progress style*/
+.progress{
+  height:10px;
+  background-color:$my_color_2;
+  opacity:0.9;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+ h2 {
+  @include font();
+  font-weight: $font_bold;
+  text-transform: uppercase;
+}
+
+.content {
+  margin: 20px 0 0 0;
+  position: $position_2;
+  justify-content: space-between;
+}
+
+/* style the empty content before */
+ .content:before {
+  @include content_before_after();
+  width: 50%;
+  background: #1a1a1a;
+}
+
+/*/* style the empty content after */ 
+.content:after {
+  @include content_before_after();
+  width: 15%;
+  background: rgb(243, 241, 236);
+}
+
+.content .fab{
+  @include fab_fas();
+}
+
+/*set hover to fab icon */
+.content .fab:hover{
+  background:$my_color_3 ;
+}
+
+.content .fas {
+  @include fab_fas();
+}
+
+
+.content .text {
+  @include font();
+  padding-left: 10px;
+}
+
+.content .d-flex{
+  justify-content: flex-start;
+}
+
+.d-flex .fas {
+  @include fab_fas();
+}
+
+/*set hover to fas icon */
+.content .fas:hover {
+  background:$my_color_3 ;
+}
+/* evaluation word in message */
+.Evaluation-title{
+background-image: url("8.jfif") ;
+  width:300px;
+  height:55px;
+border-radius:20px;
+}
+.img {
+  border: 1px solid rgb(74, 228, 233);
+  border-radius: 10px; 
+  width: 150px;
+}
+
+.img:hover {
+  box-shadow: 0 0 5px 5px rgba(75, 202, 192, 0.5);
+}
